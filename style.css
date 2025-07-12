@@ -139,31 +139,3 @@ body {
   transform: rotate(90deg);
   transition-delay: 0.4s;
 }
-
-/* iPhone 12 specific adjustments */
-@media only screen 
-  and (min-device-width: 390px) 
-  and (max-device-width: 844px) 
-  and (-webkit-device-pixel-ratio: 3) {
-  
-  .container {
-    width: 320px;
-    height: 260px;
-  }
-  
-  .envelope-wrapper {
-    width: 300px;
-    height: 230px;
-  }
-  
-  .letter {
-    width: 60%;
-    height: 75%;
-    font-size: 9px;
-    padding: 15px 10px;
-  }
-  
-  .flap > .envelope > .letter {
-    bottom: 230px;
-  }
-}
