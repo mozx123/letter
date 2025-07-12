@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>To my Love.</strong>
+                        <p>
+                            I know when you asked me to write a letter this is probably not what you expected,<br>
+                            I'll be honest with you I'm bad with words so I thought combining it with some coding would make it easier.<br><br>
+
+                            I wanted to say how much everything changed the moment you stepped foot into my life.<br>
+                            Everything started to feel so much lighter.<br>
+                            You make my bad days into good within a minute of just talking to you.<br><br>
+
+                            I have never in my life imagined I'd end up with such an amazing person like you.<br>
+                            I love every single detail about you—every cell, every piece of DNA (yes I'm using a bit of biology here). What I love the most<br>
+                            is that pretty smile of yours. It makes me weak.<br>
+                            I hope you know there's nothing that could ever replace you or have any importance to me more than you.<br><br>
+
+                            I love you so deeply and I'm so grateful for you.<br>
+                            I will forever be grateful for you.<br>
+                            You mean more to me than I ever thought someone could. Loving you feels like a blessing<br>
+                            to me, and I want to keep loving you for eternity.<br><br>
+
+                            I want to say more, but there's not much that could fit in here.<br><br>
+
+                            - from your bad with words girlfriend &lt;3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
