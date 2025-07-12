@@ -11,32 +11,30 @@
 
 body {
   margin: 0;
-  padding: 20vh 0 0 0;   /* PUSH DOWN 20% from top */
+  padding: 0;
   box-sizing: border-box;
   background: var(--bg-color);
-
-  display: flex;
-  align-items: center;  /* vertical center WITH padding-top */
-  justify-content: center;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
   position: relative;
-  width: 442px;    /* 520 * 0.85 */
-  height: 357px;   /* 420 * 0.85 */
-  background: var(--bg-envelope-color);
-  box-shadow: 0 0 40px var(--shadow-color);
-  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 25vh;  /* Shift everything down 25% (15% more) */
+  box-sizing: border-box;
 }
 
 .envelope-wrapper {
   position: relative;
   width: 421px;    /* 495 * 0.85 */
   height: 323px;   /* 380 * 0.85 */
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
   overflow: visible;
 }
 
@@ -47,6 +45,7 @@ body {
   overflow: visible;
 }
 
+/* Envelope flap */
 .envelope::before {
   content: "";
   position: absolute;
@@ -62,6 +61,7 @@ body {
   z-index: 5;
 }
 
+/* Envelope body */
 .envelope::after {
   content: "";
   position: absolute;
@@ -76,6 +76,7 @@ body {
   z-index: 3;
 }
 
+/* Letter inside envelope */
 .letter {
   position: absolute;
   right: 20%;
@@ -87,6 +88,7 @@ body {
   padding: 20px 15px;
   text-align: left;
   color: var(--txt-color);
+  
   font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
   font-size: 10px;
   line-height: 1.4;
@@ -95,18 +97,20 @@ body {
   overflow-y: auto;
 }
 
+/* When envelope opens */
 .flap > .envelope::before {
   transform: rotateX(180deg);
   z-index: 1;
 }
 
 .flap > .envelope > .letter {
-  bottom: 323px;
+  bottom: 323px; /* match envelope-wrapper height to slide fully out */
   transform: scale(1.2);
   z-index: 10;
   transition-delay: 1s;
 }
 
+/* Heart styling */
 .heart {
   position: absolute;
   top: 50%;
